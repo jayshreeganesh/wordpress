@@ -1,0 +1,14 @@
+/*
+ Theme Name: My Child Theme
+ Theme URI: https://example.com/my-child-theme
+ Description: A child theme of My Parent Theme
+ Author: Your Name
+ Author URI: https://example.com
+ Template: my-parent-theme
+ Version: 1.0
+*/
+
+/* Custom CSS for child theme */
+body {
+    background-color: #f0f0f0;
+}

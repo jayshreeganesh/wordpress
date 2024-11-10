@@ -1,0 +1,338 @@
+/*
+Theme Name: Thrive Coach
+Theme URI: https://blossomthemes.com/wordpress-themes/thrive-coach/
+Template: seva-lite 
+Author: Blossom Themes
+Author URI: https://blossomthemes.com/
+Description: Thrive Coach is a minimalistic theme for mentors and coaches such as health coach, lifestyle coach, business coach, personal development coach, life coach, psychotherapist, psychotherapy, therapy, online psychological counselor, and so on. You can include client testimonials, blog, services you offer, Calls to action, and contact forms in different sections. Thrive Coach integrates CoachPodium and Wheel of Life plugin to create interactive Wheel of Life assessments. This online assessment allows your clients to take a quick test to view different aspects of their life and see what areas need improvement. Its user-friendly features, SEO and speed optimization, and flexible customization options make it a standout choice for any coach.Check theme details at https://blossomthemes.com/wordpress-themes/thrive-coach/, demo at https://blossomthemes.com/theme-demo/?theme=thrive-coach, documentation at https://docs.blossomthemes.com/seva-lite/, and get support at https://blossomthemes.com/support-ticket/.
+Version: 1.0.0
+License: GNU General Public License v3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Requires PHP: 7.4
+Tested up to: 6.3
+Text Domain: thrive-coach
+Tags: blog, one-column, two-columns, right-sidebar, left-sidebar, footer-widgets, custom-background, custom-header, custom-menu, custom-logo, featured-images, threaded-comments, full-width-template, rtl-language-support, translation-ready, theme-options, photography, e-commerce
+*/
+
+:root {
+  --global-body-font: "Comme";
+  --global-heading-font: "Instrument Serif";
+  --primary-color: #e09789;
+  --primary-color-rgb: 224, 151, 137;
+  --secondary-color: #8897aa;
+  --secondary-color-rgb: 136, 151, 170;
+}
+
+/*============================
+HEADER LAYOUT THREE
+============================*/
+.site-header.style-three .header-middle>.container .site-branding {
+  flex: 1;
+
+  justify-content: center;
+}
+
+.site-header.style-three .header-top .header-left .secondary-menu {
+  margin-right: 35px;
+}
+
+.site-header.style-three .header-top .header-right .header-search {
+  margin-left: 25px;
+}
+
+.site-header.style-three .header-main .main-navigation {
+  justify-content: space-between;
+  flex: 1;
+}
+
+.site-header.style-three .header-main .main-navigation .header-button-wrap {
+  margin-left: 0;
+}
+
+.site-header .header-search .search-toggle {
+  all: unset;
+  cursor: pointer;
+}
+
+.site-header .header-search .search-toggle svg {
+  width: 15px;
+  height: 15px;
+}
+
+.site-header .header-search .search-toggle:hover svg path {
+  stroke: var(--primary-color);
+}
+
+.site-header .header-search .header-search-wrap {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(var(--black-color-rgb), 0.8);
+  z-index: 99999;
+}
+
+.site-header .header-search .header-search-wrap .header-search-inner {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.site-header .header-search .header-search-wrap .header-search-inner .search-form {
+  display: flex;
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+  height: 70px;
+  padding: 0 15px;
+}
+
+.site-header .header-search .header-search-wrap .header-search-inner .search-form input[type="search"] {
+  height: 70px;
+}
+
+.site-header .header-search .header-search-wrap .header-search-inner .close {
+  width: 40px;
+  height: 40px;
+  font-size: 0;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 0;
+  min-height: unset;
+  background: none;
+}
+
+.site-header .header-search .header-search-wrap .header-search-inner .close::before,
+.site-header .header-search .header-search-wrap .header-search-inner .close::after {
+  content: "";
+  background: var(--white-color);
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transition: all 0.35s ease;
+}
+
+.site-header .header-search .header-search-wrap .header-search-inner .close::before {
+
+  transform: rotate(45deg);
+}
+
+.site-header .header-search .header-search-wrap .header-search-inner .close::after {
+  transform: rotate(-45deg);
+}
+
+.site-header .header-search .header-search-wrap .header-search-inner .close:hover::before,
+.site-header .header-search .header-search-wrap .header-search-inner .close:hover::after {
+  background: var(--primary-color);
+}
+
+@media screen and (min-width: 1025px) {
+  .site-header.style-three .secondary-menu>div {
+    left: auto;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .site-header.style-three .header-top>.container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1024px) {
+  .site-header.style-three .header-main .container .main-navigation {
+    justify-content: flex-end;
+  }
+
+  @media screen and (min-width: 1025px) {
+    .site-header.style-three .header-main .main-navigation .nav-menu>li:first-child>a {
+      padding-left: 0;
+    }
+  }
+}
+
+/*============================
+BANNER LAYOUT TWO
+============================*/
+.site-banner.style-one {
+  position: relative;
+  background: rgba(var(--primary-color-rgb), 0.03);
+}
+
+.site-banner.style-one::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--white-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.site-banner.style-one::after {
+  content: "";
+  width: 300px;
+  height: 328px;
+  border-radius: 50%;
+  background: rgba(var(--secondary-color-rgb), 0.1);
+  position: absolute;
+  bottom: -139px;
+  left: -89px;
+}
+
+.site-banner.style-one .item {
+  position: relative;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) {
+  .site-banner.style-one .item {
+    grid-gap: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .site-banner.style-one .item .banner-secondary-img {
+    display: none;
+  }
+}
+
+.site-banner.style-one .item .banner-secondary-img img {
+  margin-top: -40px;
+}
+
+.site-banner.style-one .item .wp-custom-header {
+  flex: 0 0 60%;
+}
+
+@media screen and (max-width: 1024px) {
+  .site-banner.style-one .item .wp-custom-header {
+    margin-bottom: 0;
+  }
+}
+
+.site-banner.style-one .item .wp-custom-header::before {
+  content: none;
+}
+
+.site-banner.style-one .banner-caption {
+  width: 100%;
+  padding: 50px 60px;
+  background: var(--white-color);
+  position: absolute;
+  bottom: 42px;
+  left: 16%;
+}
+
+@media screen and (min-width: 1025px) {
+  .site-banner.style-one .banner-caption {
+    max-width: 533px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .site-banner.style-one .banner-caption {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .site-banner.style-one .banner-caption {
+    position: static;
+    margin: 0 auto;
+  }
+}
+
+.site-banner.style-one .banner-caption .subtitle {
+  margin-bottom: 10px;
+}
+
+.site-banner.style-one .banner-caption .title {
+  font-size: 2.2222222222em;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.site-banner.style-one .banner-caption .button-wrap {
+  margin-top: 30px;
+}
+
+.site-banner .wp-custom-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* header cart */
+.site-header .header-cart {
+  line-height: 20px;
+  position: relative;
+}
+
+.site-header .header-cart .cart {
+  position: relative;
+  color: rgba(var(--font-color-rgb), 0.8);
+}
+
+.site-header .header-cart .cart svg {
+  width: 15px;
+  height: 15px;
+}
+
+.site-header .header-cart .cart svg path {
+  fill: rgba(var(--font-color-rgb), 0.8);
+}
+
+.site-header .header-cart .cart .number {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  color: var(--white-color);
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  font-size: 0.6666666667em;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.site-header .header-cart .cart:hover {
+  color: var(--primary-color);
+}
+
+.site-header .header-cart .cart:hover svg path {
+  fill: var(--primary-color);
+}
+
+
+@media screen and (min-width: 1025px) {
+
+  .site-header.style-three>.header-main .main-navigation>div .nav-menu>li:last-child .sub-menu .sub-menu,
+  .site-header.style-three>.header-main .main-navigation>div .nav-menu>li:nth-last-child(2) .sub-menu .sub-menu {
+    left: 100%;
+    right: auto;
+  }
+
+  .site-header.style-three>.header-main .main-navigation>div .nav-menu>li:last-child .sub-menu,
+  .site-header.style-three>.header-main .main-navigation>div .nav-menu>li:nth-last-child(2) .sub-menu {
+    left: 0;
+    right: auto;
+  }
+}
+
+.site-header.style-three.header-main .main-navigation>div .nav-menu>li:last-child .sub-menu li a::after,
+.site-header.style-three .header-main .main-navigation>div .nav-menu>li:nth-last-child(2) .sub-menu li a::after {
+  transform: rotate(-90deg);
+}
